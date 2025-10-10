@@ -8,7 +8,7 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { cn } from "@/utils";
+import { cn } from "@/lib/utils";
 import {
   ArrowRightIcon,
   CalendarIcon,

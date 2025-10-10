@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 export const NAV_LINKS = [
   {
-    title: "features",
+    title: "Features",
     href: "/features",
     menu: [
       {
