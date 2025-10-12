@@ -15,7 +15,9 @@ import {
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
 import { NAV_LINKS } from "@/utils/constants/nav_links";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, ZapIcon } from "lucide-react";
+import ModeToggle from "../theme/ModeToggle";
+import { Button, buttonVariants } from "../ui/button";
 
 export const Navbar = () => {
   const [scroll, setscroll] = useState(false);
@@ -36,7 +38,7 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "sticky top-0 border-b border-transparent z-[99999] inset-x-0 h-14 w-full select-none",
+        "sticky top-0 border-b border-transparent z-[99999] inset-x-0 h-20 w-full select-none",
         scroll && "border-background/80 bg-background/40 bakcdrop-blur-md"
       )}
     >
@@ -45,7 +47,7 @@ export const Navbar = () => {
           <div className="flex items-center space-x-12">
             <Link href="/#home">
               <span className="text-lg text-white font-bold font-heading !leading-none">
-                Linkify
+                linkify
               </span>
             </Link>
             <NavigationMenu className="hidden lg:flex">
@@ -67,11 +69,11 @@ export const Navbar = () => {
                             )}
                           >
                             {link.title === "Features" && (
-                              <li className="row-span-4 pr-2 relative rounded-lg overflow-hidden">
-                                <div className="absolute inset-0 !z-10 h-full w-[calc(100%-10px)] bg-[linear-gradient(to_right,rgba(38,38,38,0.5)_1px,transparent_1px),linear-gradient(to_bottom,rgb(38,38,38,0.5)_1px,transparent_1px)] bg-[size:1rem_1rem]"></div>
+                              <li className="row-span-3">
+                                <div className=""></div>
                                 <NavigationMenuLink asChild>
                                   <Link
-                                    className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                                     href="/"
                                   >
                                     <h6 className="mt-4 mb-2 text-lg font-medium">
@@ -110,6 +112,17 @@ export const Navbar = () => {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
+          </div>
+          <div className="hidden lg:flex items-center">
+            <div className="flex items-center gap-x-4">
+              <div>
+                <ModeToggle />
+              </div>
+              <Link href="/" className={buttonVariants({ size: "sm" })}>
+                Get Started
+                <ZapIcon className="size-3.5 ml-1.5 text-orange-500 fill-orange-500" />
+              </Link>
+            </div>
           </div>
         </MaxwidthWrapper>
       </AnimationContainer>
