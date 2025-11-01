@@ -43,10 +43,11 @@ export const Navbar = () => {
       )}
     >
       <AnimationContainer reverse delay={0.1} className="size-full">
-        <MaxwidthWrapper className="flex items-center justify-center">
+        <MaxwidthWrapper className="flex items-center justify-between">
+          {/* right Side  */}
           <div className="flex items-center space-x-12">
             <Link href="/#home">
-              <span className="text-lg text-white font-bold font-heading !leading-none">
+              <span className="text-xl text-white font-bold font-heading !leading-none">
                 linkify
               </span>
             </Link>
@@ -68,7 +69,7 @@ export const Navbar = () => {
                                 : "lg:grid-cols-2"
                             )}
                           >
-                            {link.title === "Features" && (
+                            {/* {link.title === "Features" && (
                               <li className="row-span-3">
                                 <div className=""></div>
                                 <NavigationMenuLink asChild>
@@ -85,7 +86,7 @@ export const Navbar = () => {
                                   </Link>
                                 </NavigationMenuLink>
                               </li>
-                            )}
+                            )} */}
                             {link.menu.map((menuitem) => (
                               <ListItem
                                 key={menuitem.title}
@@ -113,11 +114,12 @@ export const Navbar = () => {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
+          {/* Right side  */}
           <div className="hidden lg:flex items-center">
             <div className="flex items-center gap-x-4">
-              <div>
+              {/* <div>
                 <ModeToggle />
-              </div>
+              </div> */}
               <Link href="/" className={buttonVariants({ size: "sm" })}>
                 Get Started
                 <ZapIcon className="size-3.5 ml-1.5 text-orange-500 fill-orange-500" />

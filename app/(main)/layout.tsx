@@ -33,7 +33,7 @@ const MainLayout = ({ children }: Props) => {
         <div className="relative z-10 flex-1 flex flex-col">
           <Navbar />
           <main className="flex-1 mt-20">{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </ThemeProvider>

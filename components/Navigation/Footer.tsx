@@ -19,7 +19,7 @@ const Footer = () => {
             <p className="text-muted-foreground mt-4 text-sm text-start">
               Manage your links with ease.
             </p>
-            <span className="mt-4 text-neutral-200 text-sm flex items-center">
+            <span className="mt-4 text-gray-600 text-sm flex items-center">
               Made by{" "}
               <Link href=" " className="font-semibold ml-1">
                 Sachin Dagar
