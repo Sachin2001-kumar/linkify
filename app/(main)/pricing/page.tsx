@@ -5,6 +5,7 @@ import MaxwidthWrapper from "@/components/global/max-width-wrapper";
 import React from "react";
 import { motion } from "framer-motion";
 import MagicBadge from "@/components/ui/magic-badge";
+import PricingCard from "@/components/pricing/PricingCards";
 
 const Pricing = () => {
   return (
@@ -20,9 +21,9 @@ const Pricing = () => {
             <br /> No surprises.
           </p>
         </div>
-        <motion.div>
-          <motion.div className="flex"></motion.div>
-        </motion.div>
+      </AnimationContainer>
+      <AnimationContainer delay={0.3}>
+        <PricingCard />
       </AnimationContainer>
     </MaxwidthWrapper>
   );
