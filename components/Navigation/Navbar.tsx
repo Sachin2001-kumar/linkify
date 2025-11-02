@@ -69,7 +69,7 @@ export const Navbar = () => {
                                 : "lg:grid-cols-2"
                             )}
                           >
-                            {/* {link.title === "Features" && (
+                            {link.title === "Features" && (
                               <li className="row-span-3">
                                 <div className=""></div>
                                 <NavigationMenuLink asChild>
@@ -86,7 +86,7 @@ export const Navbar = () => {
                                   </Link>
                                 </NavigationMenuLink>
                               </li>
-                            )} */}
+                            )}
                             {link.menu.map((menuitem) => (
                               <ListItem
                                 key={menuitem.title}

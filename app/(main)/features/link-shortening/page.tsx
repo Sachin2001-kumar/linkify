@@ -20,11 +20,7 @@ const LinkShorteningPage = () => {
             </p>
           </div>
 
-          <div
-            className="relative flex flex-col sm:flex-row items-center justify-center gap-4 h-[250px] p-6 rounded-2xl overflow-hidden 
-  bg-gradient-to-br from-[#1a0033]/80 via-[#0a001a]/80 to-[#001133]/80 
-  border-2 border-purple-600/40 shadow-[0_0_40px_rgba(124,58,237,0.35)] backdrop-blur-2xl mt-10 mb-10"
-          >
+          <div className="relative flex flex-col sm:flex-row items-center justify-center gap-4 h-[250px] p-6 rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a0033]/80 via-[#0a001a]/80 to-[#001133]/80 border-2 border-purple-600/40 shadow-[0_0_40px_rgba(124,58,237,0.35)] backdrop-blur-2xl mt-10 mb-10">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-600 opacity-30 blur-[60px] animate-pulse-slow"></div>
 
             <div className="absolute inset-0 border-[1px] border-transparent rounded-2xl bg-gradient-to-r from-purple-600/40 via-blue-500/40 to-purple-600/40 [mask-composite:exclude] pointer-events-none"></div>

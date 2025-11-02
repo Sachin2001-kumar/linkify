@@ -1,3 +1,5 @@
+"use client";
+
 import AnimationContainer from "@/components/global/AnimationContainer";
 import MaxwidthWrapper from "@/components/global/max-width-wrapper";
 import React from "react";
@@ -12,7 +14,6 @@ const ChangeLog = () => {
             bg-gradient-to-br from-[#1a0033]/70 via-black/70 to-[#000d33]/70 
             border border-purple-700/50 shadow-[0_0_30px_rgba(124,58,237,0.3)] backdrop-blur-2xl"
           >
-            {/* Subtle glowing overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-600 opacity-20 blur-[80px] animate-pulse-slow"></div>
 
             <div className="relative z-10">

@@ -33,7 +33,7 @@ const PricingCards = () => {
   return (
     <Tabs
       defaultValue="monthly"
-      className="w-full flex flex-col items-center justify-center "
+      className="w-full flex flex-col items-center justify-center m-10"
     >
       <TabsList>
         <MotionTabTrigger
