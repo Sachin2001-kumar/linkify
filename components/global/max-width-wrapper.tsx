@@ -9,7 +9,7 @@ const MaxwidthWrapper = ({ children, className }: props) => {
   return (
     <section
       className={cn(
-        "h-full mx-auto w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20",
+        "h-full mx-auto w-full md:max-w-screen-xl px-4 mt-0 md:px-12 lg:px-20",
         className
       )}
     >

@@ -38,8 +38,8 @@ export const Navbar = () => {
   return (
     <header
       className={cn(
-        "sticky top-0 border-b border-transparent z-[99999] inset-x-0 h-20 w-full select-none",
-        scroll && "border-background/80 bg-background/40 bakcdrop-blur-md"
+        "sticky top-0 border-b border-transparent z-[99999] inset-x-0 h-[60px] w-full select-none backdrop-blur-md mb-0",
+        scroll && "border-background/80 bg-background/40 bakcdrop-blur-lg"
       )}
     >
       <AnimationContainer reverse delay={0.1} className="size-full">
