@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Navbar } from "@/components/Navigation/Navbar";
+import Navbar from "@/components/Navigation/Navbar";
 import Footer from "@/components/Navigation/Footer";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 
@@ -17,7 +17,7 @@ const MainLayout = ({ children }: Props) => {
       enableSystem
       disableTransitionOnChange
     >
-      <div className="relative min-h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col bg-black">
         {/* 🔹 Background grid behind everything */}
         {/* <div
           id="home"

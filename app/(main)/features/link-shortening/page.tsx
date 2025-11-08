@@ -1,9 +1,32 @@
 import AnimationContainer from "@/components/global/AnimationContainer";
 import MaxwidthWrapper from "@/components/global/max-width-wrapper";
 import MagicBadge from "@/components/ui/magic-badge";
-import React from "react";
+import React, { useState } from "react";
 
 const LinkShorteningPage = () => {
+  const [url, setUrl] = useState("");
+  const [short, setShort] = useState("");
+
+  const handleGenerate = async () => {
+    const query = `
+      mutation($url: String!) {
+        createShortLink(originalUrl: $url) {
+          shortCode
+          originalUrl
+        }
+      }
+    `;
+
+    const res = await fetch("/api/graphql", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query, variables: { url } }),
+    });
+
+    const data = await res.json();
+    setShort(data.data.createShortLink.shortCode);
+  };
+
   return (
     <>
       <MaxwidthWrapper>
@@ -27,6 +50,8 @@ const LinkShorteningPage = () => {
 
             <div className="relative z-10 flex flex-col sm:flex-row gap-3 items-center justify-center">
               <input
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
                 type="text"
                 placeholder="Enter your long link"
                 className="w-72 sm:w-96 p-3 bg-black/40 text-white placeholder-gray-400 border border-purple-500/40 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-purple-400 transition-all"
@@ -34,6 +59,7 @@ const LinkShorteningPage = () => {
               <button
                 type="submit"
                 className="px-6 py-2.5 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-600 text-white font-semibold rounded-lg shadow-[0_0_25px_rgba(99,102,241,0.7)] hover:shadow-[0_0_35px_rgba(129,140,248,0.9)] hover:scale-105 transition-all duration-300"
+                onClick={handleGenerate}
               >
                 Generate
               </button>
@@ -44,6 +70,8 @@ const LinkShorteningPage = () => {
           <p className="text-center text-sm text-gray-400 mt-4">
             Paste your long URL above and get a short, trackable link instantly.
           </p>
+
+          <div>{short && <p>Short URL: /s/{short}</p>}</div>
         </AnimationContainer>
       </MaxwidthWrapper>
     </>
