@@ -1,7 +1,9 @@
+"use client";
+
 import AnimationContainer from "@/components/global/AnimationContainer";
 import MaxwidthWrapper from "@/components/global/max-width-wrapper";
 import MagicBadge from "@/components/ui/magic-badge";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const LinkShorteningPage = () => {
   const [url, setUrl] = useState("");
